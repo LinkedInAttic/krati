@@ -1,0 +1,22 @@
+project.ext.isDefaultEnvironment = !project.hasProperty('overrideBuildEnvironment')
+
+File getEnvironmentScript()
+{
+  final File env = file(isDefaultEnvironment ? 'defaultEnvironment.gradle' : project.overrideBuildEnvironment)
+  assert env.isFile() : "The environment script [$env] does not exists or is not a file."
+  return env
+}
+
+apply from: environmentScript
+
+project.ext.externalDependency = [
+  'log4j': 'log4j:log4j:1.2.16',
+  'sleepycat': 'com.sleepycat:je:4.0.92',
+  'avro': 'org.apache.avro:avro:1.4.1',
+  'protobuf': 'com.google.protobuf:protobuf-java:2.3.0',
+  'slf4jToLog4j': 'org.slf4j:slf4j-log4j12:1.5.6',
+  'junit':'junit:junit:4.7'
+];
+
+subprojects {
+}

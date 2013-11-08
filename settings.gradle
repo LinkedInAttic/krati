@@ -1,0 +1,3 @@
+include "krati-avro"
+include "krati-main"
+
