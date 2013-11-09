@@ -6,12 +6,11 @@ configurations {
 }
 
 dependencies {
-  compile externalDependency.fastutil
+  compile project(':krati-main')
   compile externalDependency.log4j
-  compile externalDependency.protobuf
 
-  testCompile externalDependency.junit
-  testCompile externalDependency.sleepycat
+  testCompile externalDependency.avro
+  testCompile externalDependency.slf4jToLog4j
 }
 
 test {

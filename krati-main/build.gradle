@@ -6,10 +6,9 @@ configurations {
 }
 
 dependencies {
-  compile externalDependency.fastutil
   compile externalDependency.log4j
-  compile externalDependency.protobuf
 
+  testCompile externalDependency.protobuf
   testCompile externalDependency.junit
   testCompile externalDependency.sleepycat  
 }
