@@ -14,3 +14,6 @@ dependencies {
   testCompile externalDependency.sleepycat
 }
 
+test {
+  exclude '**/**'
+}
