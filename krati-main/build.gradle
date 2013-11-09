@@ -1,0 +1,16 @@
+apply plugin: 'java'
+
+configurations {
+  sourceGen {
+  }
+}
+
+dependencies {
+  compile externalDependency.fastutil
+  compile externalDependency.log4j
+  compile externalDependency.protobuf
+
+  testCompile externalDependency.junit
+  testCompile externalDependency.sleepycat  
+}
+
