@@ -8,8 +8,8 @@ configurations {
 dependencies {
   compile project(':krati-main')
   compile externalDependency.log4j
+  compile externalDependency.avro
 
-  testCompile externalDependency.avro
   testCompile externalDependency.slf4jToLog4j
 }
 
